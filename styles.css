@@ -1,0 +1,107 @@
+* {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: blanchedalmond;
+    transition: background-color 0.5s ease;
+}
+
+/* LIGHT MODE & GENERAL */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: 100px repeat(2, 100px);
+    background-color: rgb(255, 181, 44);
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 20px 5px rgb(0, 1, 59);
+    height: 500px;
+}
+
+button {
+    margin: 5px;
+    padding: 0;
+    border-radius: 35px;
+    font-size: 1.5em;
+    border: none;
+    background-color: rgb(255, 208, 121);
+    box-shadow: 5px 5px 5px -2px rgb(109, 73, 0);
+    color: rgb(0, 0, 95);
+}
+
+button:active {
+    background-color: orange;
+}
+
+.calculadora button:active {
+  background-color: rgb(255, 149, 0);
+  color: #663500;
+}
+
+
+.display {
+    display: flex;
+    grid-column: 1 / -1;
+    padding: 20px;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgb(204, 133, 1);
+    border-radius: 20px;
+    word-break: break-all;
+    text-align: right;
+    justify-content: space-between;
+    height: 100px;
+    word-break: break-all;
+    box-shadow: 0 0 0px 2px rgb(0, 0, 99, 20);
+}
+
+.switch{
+    grid-column: span 2;
+}
+
+#valor-actual , #valor-previo {
+    font-size: 2em;
+}
+
+/* DARK MODE */
+  
+  body.dark-mode {
+    background-color: #02001e;
+  }
+  
+  
+  .calculadora.dark-mode {
+    background-color: #00147b;
+    box-shadow: 10px 10px 20px 5px rgb(98, 64, 0);
+    
+  }
+  
+  
+  .calculadora.dark-mode button {
+    background-color: #01002d;
+    color: #fcd5af;
+  }
+  
+
+  .calculadora.dark-mode button:active {
+    background-color: #0400dd;
+    color: #afb8fc;
+  }
+
+  .calculadora.dark-mode .display {
+    background-color: #482d00;
+    color: #ffd69f;
+  };
+
+  /*FIN*/
